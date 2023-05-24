@@ -1,0 +1,20 @@
+:root {
+    --grayish-blue: #666CA3;
+    --navy-blue: #13183F;
+    --grey: #83869A;
+    --hot-pink: #F74780;
+    --soft-pink: #FFA7C3;
+    --white: #FFFFFF;
+    --warm-gradient: linear-gradient(#FF6F48, #F02AA6);
+    --cool-gradient: linear-gradient(#F02AA6, #4851FF);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Plus Jakarta Sans";
+}

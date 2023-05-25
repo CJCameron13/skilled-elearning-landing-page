@@ -18,3 +18,30 @@
 body {
     font-family: "Plus Jakarta Sans";
 }
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border-width: 0;
+    font-family: "Plus Jakarta Sans";
+    font-weight: 600;
+    color: var(--white);
+}
+
+#top-button {
+    background-color: var(--navy-blue); 
+}
+
+#welcome-box {
+    margin-left: 8%;
+}

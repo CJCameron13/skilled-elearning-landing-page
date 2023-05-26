@@ -7,6 +7,7 @@
     --white: #FFFFFF;
     --warm-gradient: linear-gradient(#FF6F48, #F02AA6);
     --cool-gradient: linear-gradient(#F02AA6, #4851FF);
+    --background-gradient: linear-gradient(var(--white), #edeef5);
 }
 
 * {
@@ -17,25 +18,33 @@
 
 body {
     font-family: "Plus Jakarta Sans";
+    background-image: var(--background-gradient);
+    overflow-x: hidden;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 8%;
     margin-right: 8%;
 }
 
 button {
-    width: 120px;
-    height: 40px;
-    border-radius: 20px;
+    width: 160px;
+    height: 55px;
+    border-radius: 30px;
     border-width: 0;
     font-family: "Plus Jakarta Sans";
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--white);
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 50%;
 }
 
 #top-button {
@@ -44,4 +53,115 @@ button {
 
 #welcome-box {
     margin-left: 8%;
+    margin-top: 220px;
+    width: 35%;
 }
+
+#stats-image {
+    position: absolute;
+    right: -400px;
+    top: -150px;
+}
+
+
+#welcome-header {
+    font-weight: 800;
+    font-size: 3.1rem;
+    color: var(--navy-blue);
+    margin-bottom: 25px;
+}
+
+#welcome-statement {
+    color: var(--grey);
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+#welcome-button {
+    background-image: var(--warm-gradient);
+}
+
+#grid-section-container {
+    margin-top: 220px;
+    margin-left: 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+}
+
+.course-box {
+    width: 350px;
+    height: 322px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#first-course-box {
+    background-image: var(--warm-gradient);
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+#first-course-box-description {
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.icon {
+    position: absolute;
+    margin-top: -55px;
+}
+
+.course-name {
+    color: var(--navy-blue);
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.course-description {
+    color: var(--grey);
+    font-size: 1.1rem;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+#design-description {
+    margin-bottom: 59px;
+}
+
+#photography-description {
+    margin-bottom: 59px;
+}
+
+.start-course {
+    color: var(--hot-pink);
+    font-weight: 700;
+}
+
+.start-course:hover {
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--navy-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 150px;
+}
+
+#bottom-logo {
+    margin-left: 8%;
+}
+
+#bottom-button {
+    background-image: var(--cool-gradient);
+    margin-right: 8%;
+}
+

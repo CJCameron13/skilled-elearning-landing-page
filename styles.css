@@ -63,6 +63,17 @@ button:hover {
     top: -150px;
 }
 
+#tablet-stats-image {
+    display: none;
+    position: absolute;
+    right: -300px;
+    top: 0px;
+}
+
+#mobile-stats-image {
+    display: none;
+}
+
 
 #welcome-header {
     font-weight: 800;
@@ -165,3 +176,80 @@ footer {
     margin-right: 8%;
 }
 
+@media screen and (max-width: 1160px) {
+    nav {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    #welcome-box {
+        margin-left: 4%;
+        width: 40%;
+    }
+
+    #welcome-header {
+        font-size: 2.4rem;
+    }
+
+    #stats-image {
+        display: none;
+    }
+
+    #tablet-stats-image {
+        display: block;
+    }
+
+    #grid-section-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    #photography-description {
+        margin-bottom: 30px;
+    }
+
+    #bottom-logo {
+        margin-left: 4%;
+    }
+
+    #bottom-button {
+        margin-left: 4%;
+    }
+
+    .course-box {
+        width: 330px;
+        height: 302px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #welcome-box {
+        width: 92%;
+        margin-top: 50px;
+    }
+    
+    #tablet-stats-image {
+        display: none;
+    }
+
+    #mobile-stats-image {
+        display: block;
+    }
+
+    #grid-section-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-top: 50px;
+        align-items: center;
+    }
+
+    #first-course-box {
+        height: 200px;
+    }
+
+    .course-box {
+        width: 100%;
+    }
+}

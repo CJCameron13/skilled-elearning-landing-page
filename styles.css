@@ -1,9 +1,13 @@
 :root {
-    --light-blue: #66E2DC;
-    --orange: #FA7453;
-    --gold: #FFB964;
-    --white: #FCFAF9;
-    --dark-blue: #191826;
+    --grayish-blue: #666CA3;
+    --navy-blue: #13183F;
+    --grey: #83869A;
+    --hot-pink: #F74780;
+    --soft-pink: #FFA7C3;
+    --white: #FFFFFF;
+    --warm-gradient: linear-gradient(#FF6F48, #F02AA6);
+    --cool-gradient: linear-gradient(#F02AA6, #4851FF);
+    --background-gradient: linear-gradient(var(--white), #edeef5);
 }
 
 * {
@@ -13,307 +17,239 @@
 }
 
 body {
-    font-family: "IBM+Plex+Sans", sans-serif;
-    background-image: url(/equalizer-landing-page/starter-code/assets/bg-main-desktop.png);
-    width: 1250px;
-    margin: auto;
+    font-family: "Plus Jakarta Sans";
+    background-image: var(--background-gradient);
+    overflow-x: hidden;
 }
 
-.logo {
-    width: 146px;
-    height: 32px;
-}
-
-#top-logo {
-    margin-top: 50px;
-    margin-bottom: 120px;
-}
-
-#main-header-container {
-    width: 900px;
-    margin-bottom: 300px;
-}
-
-#main-header {
-    font-size: 4.5rem;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-#header-description {
-    font-size: 1.3rem;
-    line-height: 30px;
-}
-
-#bg-pattern-1 {
-    position: absolute;
-    right: 0;
-    top: -40px;
-    width: 312px;
-    height: 468px;
-}
-
-#middle-stack {
-    background-color: var(--dark-blue);
-    height: 600px;
-    border-radius: 10px;
+nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#phone {
-    width: 312px;
-    height: 642px;
-    margin-top: -200px;
-    position: relative;
-    z-index: 1;
-}
-
-#background-pattern-2 {
-    width: 312px;
-    height: 468px;
-    position: absolute;
-    left: 40%;
-    z-index: 0;
-}
-
-#subscription-container {
-    background-color: var(--orange);
-    color: var(--white);
-    width: 446px;
-    height: 625px;
-    border-radius: 10px;
-    margin-top: 100px;
-    position: relative; 
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 70px;
-}
-
-#subscription-header {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-#subscription-features {
-    font-size: 1.3rem;
-    line-height: 30px;
-    margin-bottom: 20px;
-}
-
-#subscription-price {
-    font-size: 1.3rem;
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-#price-number {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-right: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
 button {
-    height: 61px;
-    width: 100%;
-    border-radius: 10px;
+    width: 160px;
+    height: 55px;
+    border-radius: 30px;
     border-width: 0;
-    font-family: "IBM+Plex+Sans", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.button-logo {
-    margin-right: 5px;
-}
-
-#apple-button {
-    background-color: var(--dark-blue);
+    font-family: "Plus Jakarta Sans";
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--white);
-    margin-bottom: 10px;
 }
 
-#apple-button:hover {
-    background-color: var(--light-blue);
+button:hover {
     cursor: pointer;
+    opacity: 50%;
 }
 
-#android-button:hover {
-    background-color: var(--gold);
-    cursor: pointer;
+#top-button {
+    background-color: var(--navy-blue); 
 }
 
-#page-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 200px;
+#welcome-box {
+    margin-left: 8%;
+    margin-top: 220px;
+    width: 35%;
 }
 
-#copyright-info {
-    width: 366px;
-    height: 79px;
-    font-weight: 100;
-    margin-left: -200px;
+#stats-image {
+    position: absolute;
+    right: -400px;
+    top: -150px;
 }
 
-#email {
+#tablet-stats-image {
+    display: none;
+    position: absolute;
+    right: -300px;
+    top: 0px;
+}
+
+#mobile-stats-image {
+    display: none;
+}
+
+
+#welcome-header {
+    font-weight: 800;
+    font-size: 3.1rem;
+    color: var(--navy-blue);
+    margin-bottom: 25px;
+}
+
+#welcome-statement {
+    color: var(--grey);
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 30px;
+    margin-bottom: 35px;
+}
+
+#welcome-button {
+    background-image: var(--warm-gradient);
+}
+
+#grid-section-container {
+    margin-top: 220px;
+    margin-left: 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 50px;
+}
+
+.course-box {
+    width: 350px;
+    height: 322px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#first-course-box {
+    background-image: var(--warm-gradient);
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+#first-course-box-description {
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.icon {
+    position: absolute;
+    margin-top: -55px;
+}
+
+.course-name {
+    color: var(--navy-blue);
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.course-description {
+    color: var(--grey);
+    font-size: 1.1rem;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+#design-description {
+    margin-bottom: 59px;
+}
+
+#photography-description {
+    margin-bottom: 59px;
+}
+
+.start-course {
+    color: var(--hot-pink);
     font-weight: 700;
 }
 
-#socials {
-    width: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.social-logo {
-    height: 20px;
-    width: 20px;
-}
-
-.social-logo:hover {
+.start-course:hover {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1200px) {
-    body {
-        width: 700px;
+footer {
+    background-color: var(--navy-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    margin-top: 150px;
+}
+
+#bottom-logo {
+    margin-left: 8%;
+}
+
+#bottom-button {
+    background-image: var(--cool-gradient);
+    margin-right: 8%;
+}
+
+@media screen and (max-width: 1160px) {
+    nav {
+        margin-left: 4%;
+        margin-right: 4%;
     }
 
-    #bg-pattern-1 {
-        width: 220px;
-        height: 350px;
+    #welcome-box {
+        margin-left: 4%;
+        width: 40%;
     }
 
-    #main-header-container {
-        width: 520px;
+    #welcome-header {
+        font-size: 2.4rem;
     }
 
-    #main-header {
-        font-size: 4rem;
+    #stats-image {
+        display: none;
     }
 
-    #header-description {
-        font-size: 1.1rem;
+    #tablet-stats-image {
+        display: block;
     }
 
-    #phone {
-        position: absolute;
-        margin-left: -40%;
+    #grid-section-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-left: 4%;
+        margin-right: 4%;
     }
 
-    #subscription-container {
-        position: absolute;
-        width: 400px;
-        margin-right: -28%;
-    }
-
-    #page-footer {
-        flex-direction: column;
-        margin-left: 3%;
+    #photography-description {
+        margin-bottom: 30px;
     }
 
     #bottom-logo {
-        margin-bottom: 20px;
+        margin-left: 4%;
     }
 
-    #copyright-info {
-        margin-left: 0;
+    #bottom-button {
+        margin-left: 4%;
+    }
+
+    .course-box {
+        width: 330px;
+        height: 302px;
     }
 }
 
-@media screen and (max-width: 500px) {
-    body {
-        width: 300px;
+@media screen and (max-width: 700px) {
+    #welcome-box {
+        width: 92%;
+        margin-top: 50px;
     }
-
-    #bg-pattern-1 {
+    
+    #tablet-stats-image {
         display: none;
     }
 
-    #main-header-container {
-        width: 240px;
+    #mobile-stats-image {
+        display: block;
     }
 
-    #main-header {
-        font-size: 2rem;
-    }
-
-    #header-description {
-        font-size: 1rem;
-    }
-
-    #phone {
-        position: relative;
-        margin-left: 0;
-        width: 208px;
-    }
-
-    #middle-stack {
-        width: 100%;
-        height: 800px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    #grid-section-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-top: 50px;
         align-items: center;
     }
 
-    #background-pattern-2 {
-        display: none;
+    #first-course-box {
+        height: 200px;
     }
 
-    #subscription-container {
-        position: relative;
-        width: 300px;
-        margin-right: 0;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-
-    #subscription-features {
-        font-size: 1rem;
-        line-height: 30px;
-        margin-bottom: 20px;
-}
-
-    #subscription-price {
-        font-size: 1rem;
-}
-
-    #price-number {
-        font-size: 2rem;
-}
-
-    button {
-        height: 41px;
-        font-weight: 400;
-        font-size: 1rem;
-    }
-
-    #page-footer {
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 50px;
-    }
-
-    #copyright-info {
+    .course-box {
         width: 100%;
-        margin-bottom: 20px;
     }
-
-
 }
